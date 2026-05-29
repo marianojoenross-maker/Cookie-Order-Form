@@ -1,0 +1,24 @@
+function submitOrder() {
+  const data = {
+    name: document.getElementById("name").value,
+    contact: document.getElementById("contact").value,
+    social: document.getElementById("social").value,
+    date: document.getElementById("date").value,
+    mode: document.getElementById("mode").value,
+    address: document.getElementById("address").value,
+    velvet: document.getElementById("velvet").value,
+    meltmallow: document.getElementById("meltmallow").value,
+    box2: document.getElementById("box2").value,
+    box4: document.getElementById("box4").value,
+    payment: document.getElementById("payment").value
+  };
+
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    document.getElementById("status").innerText =
+      "Order submitted successfully 🍪🤍";
+  })
+}
