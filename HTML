@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Order Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🍪 Cookie Order Form</h1>
+  <p>Thank you for supporting our small business 🤍</p>
+
+  <input id="name" placeholder="Name">
+  <input id="contact" placeholder="Contact Number">
+  <input id="social" placeholder="Facebook / Instagram">
+  <input id="date" placeholder="Delivery / Pick-up Date">
+
+  <h3>Mode of Delivery</h3>
+  <select id="mode">
+    <option>Pick-up</option>
+    <option>Meet-up</option>
+    <option>Delivery</option>
+  </select>
+
+  <input id="address" placeholder="Address (if delivery)">
+
+  <h3>Flavors (₱70 each)</h3>
+  Velvet Bite: <input type="number" id="velvet" value="0"><br>
+  Meltmallow: <input type="number" id="meltmallow" value="0">
+
+  <h3>Box Options</h3>
+  Box of 2 (₱140): <input type="number" id="box2" value="0"><br>
+  Box of 4 (₱280): <input type="number" id="box4" value="0">
+
+  <h3>Payment Method</h3>
+  <select id="payment">
+    <option>GCash</option>
+    <option>Cash on Delivery</option>
+    <option>Bank Transfer</option>
+  </select>
+
+  <button onclick="submitOrder()">Submit Order</button>
+
+  <p id="status"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
